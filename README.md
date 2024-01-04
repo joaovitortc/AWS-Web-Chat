@@ -28,24 +28,36 @@ This project consists of Lambda functions written in Python for handling WebSock
 - Boto3 library for Python (Included in the AWS Lambda environment)
 - Bootstrap (v4.5.2)
 
-## Installation
+## Setup
 
-1. Clone the repository:
+1. **Set up AWS Lambda functions and DynamoDB table:**
+   - Use the provided code to create Lambda functions for handling WebSocket connections (`connect.py`, `disconnect.py`, `sendMessage.py`).
+   - Create a DynamoDB table to store connection IDs.
 
-   ```bash
-   git clone https://github.com/your-username/real-time-chat-app.git
-Set up AWS Lambda functions and DynamoDB table using the provided code.
+2. **Update Lambda functions with environment variables:**
+   - Open each Lambda function in the AWS Lambda Console.
+   - Add the required environment variables, including `WEBSOCKET_TABLE`.
 
-Update the Lambda functions with the appropriate environment variables, including WEBSOCKET_TABLE.
+3. **Deploy the frontend files:**
+   - Clone the repository:
+     ```bash
+     git clone https://github.com/your-username/real-time-chat-app.git
+     ```
+   - Deploy the frontend files (HTML, CSS, and JavaScript) to a web server or hosting platform.
 
-Deploy the frontend files (HTML, CSS, and JavaScript) to a web server or hosting platform.
+## Usage
 
-Usage
-Access the chat application through a web browser.
+1. **Access the chat application:**
+   - Open your web browser and navigate to the deployed frontend.
 
-Enter your username and click "Connect" to join the chat.
+2. **Connect to the chat:**
+   - Enter your username in the provided input field.
+   - Click the "Connect" button to join the chat.
 
-Start sending and receiving real-time messages with other connected users.
+3. **Start chatting:**
+   - Once connected, you can start sending and receiving real-time messages with other connected users.
 
-License
+## License
+
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the code.
+
