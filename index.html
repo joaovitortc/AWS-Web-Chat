@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Chat</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        padding-bottom: 70px; /* Adjust to accommodate the fixed input group */
+      }
+
+      #chat-container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        margin: 0 auto;
+        height: 100vh;
+      }
+
+      #user-list {
+        border-right: 1px solid #ccc;
+        padding: 20px;
+        background-color: #fff;
+        overflow-y: auto;
+      }
+
+      #chat-box {
+        position: relative;
+        overflow-y: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        width: 100%;
+      }
+
+      #chat-messages {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+      }
+
+      #message-input {
+        width: calc(100% - 60px);
+        padding: 8px;
+      }
+
+      #send-button {
+        width: 60px;
+      }
+
+      .message {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        max-width: 100%;
+        display: flex;
+        flex: 1;
+        overflow-wrap:normal;
+      }
+
+      .user {
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      .absolute-container {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: rgb(0, 255, 110);
+        padding: 30px;
+        z-index: 1000;
+        min-width: 200px;
+        max-width: 500px;
+      }
+
+      .own-message {
+        background-color: #d4edda; /* Light green for your messages */
+        align-self: flex-end;
+      }
+
+      .other-message {
+        background-color: #cce5ff; /* Light blue for other users' messages */
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center mt-5 absolute-container" id="connect-page">
+      <h1>Welcome to ChatApp</h1>
+      <p>Yes, I didn't think about a better name</p>
+      <input
+        type="text"
+        id="username"
+        class="form-control mb-3"
+        placeholder="Type your username to connect..."
+      />
+      <button id="connect" class="btn btn-primary btn-block">Connect</button>
+    </div>
+    <div id="chat-container" class="container">
+      <div id="user-list">
+        <h5></h5>
+        <div class="user"></div>
+        <!-- Add more user elements as needed -->
+      </div>
+      <div id="chat-box">
+        <div id="chat-messages" class="mb-3"></div>
+        <div class="fixed-bottom" id="sendMessages" style="display: none;">
+          <div class="input-group">
+            <input
+              type="text"
+              id="message-input"
+              class="form-control"
+              placeholder="Type your message..."
+            />
+            <div class="input-group-append">
+              <button
+                onclick="sendMessage()"
+                id="send-button"
+                class="btn btn-primary"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
