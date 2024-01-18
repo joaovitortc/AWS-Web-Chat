@@ -1,6 +1,6 @@
-# Real-Time Chat App
+https://github.com/joaovitortc/RealTimeChatApp/assets/144037699/c38e0b78-884c-4a08-aa0b-32b2379c3a6a
 
-<video src='https://dms.licdn.com/playlist/vid/D5605AQHk5uO1_UUsQg/mp4-720p-30fp-crf28/0/1704391092722?e=1706144400&v=beta&t=zA-W9Mnj36relXKHV-TAV3xz9RT6vf535qz1meK3c9o' width=180/>
+# Real-Time Chat App
 
 ## Welcome
 
